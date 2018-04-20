@@ -20,11 +20,10 @@ function ProblemTab(button, content) {
 
             let bars = '', index = 0;
             for (let item in yAxis) {
-                let attempts = 0;
                 if (maxAttempts) {
-                    attempts = (100 * response.attempts[index]) / maxAttempts;
+                    let attempts = (100 * response.attempts[index]) / maxAttempts;
                 } else {
-                    attempts = (100 * response.attempts[index]) / 1;
+                    let attempts = (100 * response.attempts[index]) / 1;
                 }
                 
                 let percent = correctAnswer[index] * 100;

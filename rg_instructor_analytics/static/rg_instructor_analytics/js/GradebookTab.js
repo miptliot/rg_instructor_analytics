@@ -98,13 +98,22 @@ function GradebookTab(button, content) {
             Plotly.newPlot('gradebook-stats-plot', data, layout, {displayModeBar: false});
         })
     }
+
     let $tbody = $('#gradebook_table_body');
+
+    $tbody.mCustomScrollbar({
+        axis: "yx",
+        autoHideScrollbar: false,
+        theme: "light"
+    });
+
     $tbody.on('scroll',()=>{
 
         let scrollLeft = $tbody.scrollLeft();
-    
+
         $('#gradebook_table_header').css("left", -scrollLeft);
         $('.gradebook-table-cell:first-child').css("left", scrollLeft)
     });
+
     return greadebookTab;
 }

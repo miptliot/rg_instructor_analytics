@@ -86,7 +86,7 @@ function GradebookTab(button, content) {
         });
 
         $tableCells.each((item) => {
-            $tableCells[item].style.width = maxLength;
+            $tableCells[item].style.flex = `0 0 ${maxLength}px`;
         });
 
         $(greadebookTab.gradebookTableBody).click(function (element) {
@@ -95,7 +95,7 @@ function GradebookTab(button, content) {
                     return '#c14f84';
                 }
                 return '#568ecc';
-            })
+            });
 
             var stat = {
                 y: greadebookTab.studentInfo[element.target.dataset['position']].grades,

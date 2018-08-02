@@ -362,7 +362,6 @@ function BaseQuestion(questionHtml, stringProblemID) {
     * @param response
     */
     this.onGettingStat = function (response) {
-        console.log(this.questionHtml);
         switch (response.type) {
             case 'bar':
                 this.displayBar(response.stats);

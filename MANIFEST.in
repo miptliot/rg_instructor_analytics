@@ -1,2 +1,3 @@
-recursive-include rg_instructor_analytics/static *
-recursive-include rg_instructor_analytics/templates *
+include README.md
+graft rg_instructor_analytics
+global-exclude *.pyc
